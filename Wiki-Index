@@ -1,0 +1,199 @@
+# 📚 Wiki Navigation Index
+
+## 🏠 [Wiki Home](Home)
+**Main entry point** - Project overview, quick start guide, and navigation to all sections.
+
+---
+
+## 🏗️ **Architecture & Design**
+
+### **Core Architecture**
+- [🏗️ Architecture Overview](Architecture-Overview) - **System architecture, component design, and technical decisions**
+- [🎯 Master Architecture Overview](Master-Architecture-Overview) - **High-level system design and architecture patterns**
+- [🌐 Complete Site Architecture](Complete-Site-Architecture) - **Detailed site structure and section architecture**
+- [🤖 Enhanced AI Architecture](Enhanced-AI-Architecture) - **AI integration patterns and service architecture**
+
+### **Design & UI/UX**
+- [🎨 Modern UI/UX Architecture](Modern-UI-UX-Architecture) - **User experience design and interface architecture**
+- [🧩 Component Design System](Component-Design-System) - **Component library, design tokens, and UI patterns**
+
+---
+
+## 📋 **Technical Specifications**
+
+### **Core Technical Docs**
+- [⚙️ Technical Specifications](Technical-Specifications) - **Technology stack, configurations, and technical requirements**
+- [🔌 API Specifications](API-Specifications) - **API design, endpoints, and integration patterns**
+- [🗄️ Database Schema Design](Database-Schema-Design) - **Data models, relationships, and storage architecture**
+- [🚀 Deployment Architecture](Deployment-Architecture) - **Deployment pipeline, infrastructure, and hosting**
+
+---
+
+## 👥 **User Experience & Stories**
+
+### **User Research & Stories**
+- [👤 User Stories & Personas](User-Stories-and-Personas) - **User research, personas, and core user stories**
+- [🎭 Modern UI User Stories](Modern-UI-User-Stories) - **UI/UX focused user stories and interaction patterns**
+- [📖 Comprehensive User Stories](Comprehensive-User-Stories) - **Complete user journey mapping and story coverage**
+
+### **Content & Information Architecture**
+- [📝 Complete Content Architecture](Complete-Content-Architecture) - **Content strategy, information architecture, and content models**
+
+---
+
+## 🤖 **AI & Machine Learning**
+
+### **AI Features & Integration**
+- [🧠 Advanced ML & AI Features](Advanced-ML-AI-Features) - **Machine learning capabilities and AI feature specifications**
+- [🔗 AI Integration Strategy](Enhanced-AI-Architecture) - **AI service integration patterns and implementation strategy**
+
+---
+
+## 📊 **Project Management**
+
+### **Planning & Implementation**
+- [📅 Implementation Phases & Todo](Implementation-Phases-Todo) - **Project timeline, phases, and detailed task breakdown**
+- [📈 Project Status](Project-Status) - **Current project status, progress tracking, and milestone status**
+- [🧪 Testing Strategy](Testing-Strategy) - **Testing approach, frameworks, and quality assurance strategy**
+
+---
+
+## 🔧 **Development & Implementation**
+
+### **Getting Started**
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/ashish-tandon/AshishTandon.Me.git
+   cd AshishTandon.Me
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
+
+4. **View your portfolio**: Open `http://localhost:3000`
+
+### **Available Scripts**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run test` - Run tests
+- `npm run type-check` - TypeScript type checking
+
+---
+
+## 📱 **Current Implementation Status**
+
+### **✅ Completed (Phase 1)**
+- [x] Next.js 14 project setup with App Router
+- [x] TypeScript configuration with strict mode
+- [x] Tailwind CSS with custom design system
+- [x] Component architecture and structure
+- [x] 3D particle network (Three.js)
+- [x] Responsive navigation and layout
+- [x] All section placeholders
+- [x] Dark/light theme toggle
+- [x] Smooth animations (Framer Motion)
+
+### **🔄 In Progress (Phase 2)**
+- [ ] AI service integration
+- [ ] Content management system
+- [ ] Dynamic content generation
+- [ ] Performance optimization
+
+### **⏳ Planned (Phases 3-7)**
+- [ ] Advanced AI features
+- [ ] Voice integration
+- [ ] Content population
+- [ ] Testing and quality assurance
+- [ ] Deployment and launch
+
+---
+
+## 🎨 **Design System Quick Reference**
+
+### **Color Palette**
+- **Primary**: Blue (#3B82F6) - Professional & Corporate
+- **Secondary**: Green (#22C55E) - Academic & Growth
+- **Accent**: Orange (#F97316) - Entrepreneurial & Dynamic
+- **Neutral**: Gray scale for text and backgrounds
+
+### **Typography**
+- **Primary Font**: Inter (Google Fonts)
+- **Monospace**: JetBrains Mono
+- **Scale**: 12px to 128px (xs to 9xl)
+
+### **Components**
+- **Navigation**: Responsive with theme toggle
+- **Hero**: 3D particle background
+- **Sections**: Modular, consistent styling
+- **Footer**: Social links and navigation
+
+---
+
+## 🚀 **Performance & Optimization**
+
+### **Current Metrics**
+- **Lighthouse Score**: To be measured
+- **First Contentful Paint**: To be measured
+- **Largest Contentful Paint**: To be measured
+- **Cumulative Layout Shift**: To be measured
+
+### **Optimization Features**
+- ✅ Code splitting (Next.js automatic)
+- ✅ Image optimization (Next.js Image component)
+- ✅ Static generation where possible
+- ✅ Responsive design (mobile-first)
+- ✅ 3D graphics optimization (Three.js)
+
+---
+
+## 🔍 **Search & Navigation Tips**
+
+### **Quick Find**
+- **Architecture**: Start with [Architecture-Overview](Architecture-Overview)
+- **User Stories**: Check [User-Stories-and-Personas](User-Stories-and-Personas)
+- **Technical Specs**: See [Technical-Specifications](Technical-Specifications)
+- **Project Status**: View [Project-Status](Project-Status)
+
+### **Documentation Types**
+- **📋 Specifications**: Technical requirements and API docs
+- **🎨 Design**: UI/UX patterns and design systems
+- **👥 User**: User research and experience design
+- **🏗️ Architecture**: System design and technical architecture
+- **📊 Project**: Planning, status, and management
+
+---
+
+## 🤝 **Support & Contributing**
+
+This is a personal portfolio project, but suggestions and feedback are welcome! Please feel free to:
+
+- Open issues for bugs or feature requests
+- Submit pull requests for improvements
+- Share ideas for new features or enhancements
+
+## 📄 **License**
+
+This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+
+## 🌟 **About Ashish Tandon**
+
+Ashish Tandon is a dynamic leader who bridges the gap between corporate strategy and civic innovation. With experience spanning executive leadership, academic research, and entrepreneurial ventures, he focuses on building systems that empower communities and drive positive change.
+
+**Connect with Ashish:**
+- [LinkedIn](https://linkedin.com/in/ashish-tandon)
+- [GitHub](https://github.com/ashish-tandon)
+
+---
+
+*Last Updated: December 2024*  
+*Wiki Version: 1.0*  
+*Total Documents: 25+ Architecture & Documentation Files*
