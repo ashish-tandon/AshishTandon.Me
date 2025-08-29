@@ -1,0 +1,171 @@
+# 🏠 Ashish Tandon Portfolio - Architecture & Documentation Wiki
+
+Welcome to the comprehensive architecture and documentation wiki for the **Ashish Tandon Portfolio** project. This wiki contains all the technical specifications, design decisions, and implementation details for this AI-powered personal portfolio website.
+
+## 🎯 Project Overview
+
+**Ashish Tandon Portfolio** is a cutting-edge, AI-powered personal portfolio website that showcases professional excellence, combining modern web technologies with intelligent personalization and personality integration.
+
+### **Key Features**
+- 🧠 **AI-Powered Intelligence**: Dynamic content generation and personalization
+- 🎨 **Modern Design**: 3D graphics, responsive design, and smooth animations
+- 🏗️ **Next.js 14**: Latest React framework with App Router
+- 🎭 **3D Graphics**: Three.js particle network system
+- 🌐 **Responsive**: Mobile-first design approach
+
+## 📚 Wiki Structure
+
+### **🏗️ Architecture & Design**
+- [🎯 Master Architecture Overview](Master-Architecture-Overview) - **High-level system design and architecture patterns**
+- [🏗️ Architecture Overview](Architecture-Overview) - **System architecture, component design, and technical decisions**
+- [🌐 Complete Site Architecture](Complete-Site-Architecture) - **Detailed site structure and section architecture**
+- [⚙️ Technical Specifications](Technical-Specifications) - **Technology stack, configurations, and technical requirements**
+
+### **📋 Project Management & Status**
+- [📈 Project Status](Project-Status) - **Current project status, progress tracking, and milestone status**
+- [📚 Wiki Index](Wiki-Index) - **Comprehensive navigation index organized by category**
+- [🚀 Setup Guide](Setup-Guide) - **Complete setup instructions and implementation guide**
+
+## 🚀 Quick Start
+
+### **Current Status**
+- **Phase**: Phase 1 Complete, Phase 2 In Progress
+- **Progress**: 25% Complete
+- **Development**: ✅ Fully functional locally
+- **Wiki**: ✅ Comprehensive documentation created
+
+### **Getting Started**
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ashish-tandon/AshishTandon.Me.git
+   cd AshishTandon.Me
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **View your portfolio**: Open `http://localhost:3000`
+
+## 🎨 Design System
+
+### **Color Palette**
+- **Primary**: Blue (#3B82F6) - Corporate & Professional
+- **Secondary**: Green (#22C55E) - Academic & Growth
+- **Accent**: Orange (#F97316) - Entrepreneurial & Dynamic
+- **Neutral**: Gray scale for text and backgrounds
+
+### **Typography**
+- **Primary Font**: Inter (Google Fonts)
+- **Monospace**: JetBrains Mono
+- **Display**: Cal Sans (when available)
+
+### **Components**
+- **Navigation**: Responsive with dark/light theme toggle
+- **Hero Section**: 3D particle network with professional introduction
+- **Sections**: Modular design for easy content management
+- **Footer**: Social links and quick navigation
+
+## 🛠️ Technology Stack
+
+### **Frontend**
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript with strict mode
+- **Styling**: Tailwind CSS with custom design system
+- **Animations**: Framer Motion
+- **3D Graphics**: Three.js with React Three Fiber
+
+### **AI Services**
+- **OpenAI**: GPT models for content generation
+- **Anthropic**: Claude for advanced AI features
+- **Custom AI**: Service abstractions and rate limiting
+
+### **Development Tools**
+- **Linting**: ESLint with Next.js and TypeScript rules
+- **Formatting**: Prettier with Tailwind CSS plugin
+- **Testing**: Jest with React Testing Library
+- **Type Checking**: TypeScript strict mode
+
+## 📱 Responsive Design
+
+### **Breakpoints**
+- **Mobile**: 320px - 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: 1024px+
+
+### **Features**
+- **Mobile-first approach**
+- **Touch-friendly interactions**
+- **Responsive typography**
+- **Adaptive layouts**
+
+## 🔍 SEO & Performance
+
+### **SEO Features**
+- **Meta tags and Open Graph**
+- **Semantic HTML structure**
+- **Performance monitoring setup**
+- **Image optimization configuration**
+
+### **Performance**
+- **Lighthouse score**: To be measured
+- **First Contentful Paint**: To be measured
+- **Largest Contentful Paint**: To be measured
+- **Cumulative Layout Shift**: To be measured
+
+## 🚧 Known Issues & Limitations
+
+1. **Content Placeholders**: All sections except Hero are currently placeholder content
+2. **AI Integration**: Not yet implemented - requires API keys and service setup
+3. **Content Management**: Static content only - no CMS integration yet
+4. **Analytics**: No tracking or analytics implemented yet
+5. **Testing**: No automated tests implemented yet
+
+## 🎯 Next Priorities
+
+### **Phase 2 (Weeks 4-6)**
+- [ ] AI Services Foundation
+- [ ] Basic AI Integration
+- [ ] Site Structure Enhancement
+
+### **Phase 3 (Weeks 7-9)**
+- [ ] ML Features
+- [ ] Voice & Translation
+
+### **Phase 4 (Weeks 10-12)**
+- [ ] Personal Features
+- [ ] Content System
+
+## 🤝 Contributing
+
+This is a personal portfolio project, but suggestions and feedback are welcome! Please feel free to:
+
+- Open issues for bugs or feature requests
+- Submit pull requests for improvements
+- Share ideas for new features or enhancements
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+
+## 🌟 About Ashish Tandon
+
+Ashish Tandon is a dynamic leader who bridges the gap between corporate strategy and civic innovation. With experience spanning executive leadership, academic research, and entrepreneurial ventures, he focuses on building systems that empower communities and drive positive change.
+
+**Connect with Ashish:**
+- [LinkedIn](https://linkedin.com/in/ashish-tandon)
+- [GitHub](https://github.com/ashish-tandon)
+
+---
+
+*Last Updated: December 2024*  
+*Wiki Version: 1.0*  
+*Project Status: Phase 1 Complete, Phase 2 In Progress*
+
+**🎉 Your comprehensive portfolio documentation is now live on GitHub!**
