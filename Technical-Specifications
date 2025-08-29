@@ -1,0 +1,402 @@
+# ⚙️ Technical Specifications
+
+## 🎯 Overview
+
+This document provides comprehensive technical specifications for the **Ashish Tandon Portfolio** project, including technology stack, configurations, performance requirements, and implementation details.
+
+## 🏗️ Technology Stack
+
+### **Frontend Framework**
+- **Next.js**: Version 14.0.4 with App Router
+- **React**: Version 18.2.0 with latest features
+- **TypeScript**: Version 5.3.3 with strict mode enabled
+- **Node.js**: Version 18+ required
+
+### **Styling & Design**
+- **Tailwind CSS**: Version 3.4.0 with custom design system
+- **Framer Motion**: Version 10.16.16 for animations
+- **PostCSS**: Version 8.4.32 with Tailwind and Autoprefixer
+- **Custom Design System**: Tailored color palette and typography
+
+### **3D Graphics & Visualization**
+- **Three.js**: Version 0.158.0 for 3D rendering
+- **React Three Fiber**: Version 8.15.12 for React integration
+- **React Three Drei**: Version 9.88.13 for Three.js helpers
+- **WebGL**: Hardware-accelerated 3D graphics
+
+### **State Management & Data**
+- **Zustand**: Version 4.4.7 for global state management
+- **React Query**: Version 5.17.9 for server state management
+- **SWR**: Version 2.2.4 for data fetching and caching
+- **Local Storage**: Browser-based data persistence
+
+### **AI & Machine Learning**
+- **OpenAI SDK**: Version 4.20.1 for GPT models
+- **Anthropic SDK**: Version 0.9.1 for Claude models
+- **Custom AI Services**: Service abstractions and rate limiting
+- **AI Integration Layer**: Unified AI service interface
+
+### **Development Tools**
+- **ESLint**: Version 8.56.0 with Next.js and TypeScript rules
+- **Prettier**: Version 3.1.1 with Tailwind CSS plugin
+- **Jest**: Version 29.7.0 for testing framework
+- **React Testing Library**: Version 14.1.2 for component testing
+
+## 🔧 Configuration Files
+
+### **Next.js Configuration (next.config.js)**
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Image optimization
+  images: {
+    domains: ['localhost', 'vercel.app', 'netlify.app'],
+    formats: ['image/webp', 'image/avif'],
+  },
+  
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
+  },
+  
+  // Redirects
+  async redirects() {
+    return [
+      {
+        source: '/old-page',
+        destination: '/new-page',
+        permanent: true,
+      },
+    ];
+  },
+  
+  // Performance optimizations
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@react-three/fiber', 'three'],
+  },
+};
+
+module.exports = nextConfig;
+```
+
+### **TypeScript Configuration (tsconfig.json)**
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "es6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["./app/components/*"],
+      "@/lib/*": ["./app/lib/*"],
+      "@/types/*": ["./app/types/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/public/*": ["./public/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+```
+
+### **Tailwind CSS Configuration (tailwind.config.js)**
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          500: '#3b82f6',
+          600: '#2563eb',
+          900: '#1e3a8a',
+        },
+        secondary: {
+          50: '#f0fdf4',
+          500: '#22c55e',
+          900: '#14532d',
+        },
+        accent: {
+          500: '#f97316',
+          900: '#7c2d12',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+        display: ['Cal Sans', 'Inter', 'sans-serif'],
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.3s ease-out',
+        'bounce-gentle': 'bounceGentle 2s infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        bounceGentle: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
+```
+
+### **ESLint Configuration (.eslintrc.json)**
+```json
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}
+```
+
+### **Prettier Configuration (.prettierrc)**
+```json
+{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
+```
+
+## 📱 Performance Requirements
+
+### **Core Web Vitals Targets**
+- **Largest Contentful Paint (LCP)**: < 2.5 seconds
+- **First Input Delay (FID)**: < 100 milliseconds
+- **Cumulative Layout Shift (CLS)**: < 0.1
+
+### **Loading Performance**
+- **First Contentful Paint (FCP)**: < 1.8 seconds
+- **Time to Interactive (TTI)**: < 3.8 seconds
+- **Speed Index**: < 3.4 seconds
+
+### **Bundle Size Limits**
+- **Initial JavaScript Bundle**: < 200 KB
+- **Total JavaScript Bundle**: < 500 KB
+- **CSS Bundle**: < 50 KB
+- **Image Optimization**: WebP/AVIF with fallbacks
+
+## 🔒 Security Requirements
+
+### **Content Security Policy**
+```typescript
+const cspDirectives = {
+  'default-src': ["'self'"],
+  'script-src': ["'self'", "'unsafe-eval'", "'unsafe-inline'"],
+  'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+  'font-src': ["'self'", 'https://fonts.gstatic.com'],
+  'img-src': ["'self'", 'data:', 'https:'],
+  'connect-src': ["'self'", 'https://api.openai.com', 'https://api.anthropic.com'],
+  'frame-src': ["'none'"],
+  'object-src': ["'none'"],
+  'base-uri': ["'self'"],
+  'form-action': ["'self'"],
+};
+```
+
+### **Authentication & Authorization**
+- **No User Authentication**: Public portfolio site
+- **Form Security**: CSRF protection and input validation
+- **API Security**: Rate limiting and request validation
+- **Environment Variables**: Secure API key management
+
+### **Data Protection**
+- **Privacy Compliance**: GDPR and privacy regulation compliance
+- **Cookie Management**: Transparent cookie usage and consent
+- **Analytics Privacy**: Privacy-focused analytics implementation
+- **Data Minimization**: Collect only necessary data
+
+## 🧪 Testing Requirements
+
+### **Test Coverage Targets**
+- **Unit Tests**: > 80% code coverage
+- **Component Tests**: All React components tested
+- **Integration Tests**: Key user flows tested
+- **E2E Tests**: Critical user journeys tested
+
+### **Testing Framework Setup**
+```typescript
+// jest.config.js
+module.exports = {
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
+  collectCoverageFrom: [
+    'app/**/*.{js,jsx,ts,tsx}',
+    '!app/**/*.d.ts',
+    '!app/**/*.stories.{js,jsx,ts,tsx}',
+  ],
+};
+```
+
+### **Performance Testing**
+- **Lighthouse CI**: Automated performance testing
+- **Bundle Analysis**: Webpack bundle size monitoring
+- **Load Testing**: Performance under various conditions
+- **Accessibility Testing**: Automated accessibility checks
+
+## 🚀 Deployment Requirements
+
+### **Build Process**
+```json
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  }
+}
+```
+
+### **Environment Variables**
+```bash
+# AI Services
+OPENAI_API_KEY=your_openai_api_key
+ANTHROPIC_API_KEY=your_anthropic_api_key
+
+# Next.js
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_nextauth_secret
+
+# Analytics
+NEXT_PUBLIC_GA_ID=your_google_analytics_id
+NEXT_PUBLIC_GTM_ID=your_google_tag_manager_id
+
+# Development
+NODE_ENV=development
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
+
+### **Deployment Platforms**
+- **Primary**: Vercel with automatic deployments
+- **Backup**: Netlify with manual deployments
+- **CDN**: Global content delivery network
+- **SSL**: Automatic HTTPS certificates
+
+## 📊 Monitoring & Analytics
+
+### **Performance Monitoring**
+- **Real User Monitoring (RUM)**: User experience tracking
+- **Error Tracking**: Sentry integration for error monitoring
+- **Performance Budgets**: Automated performance checks
+- **Core Web Vitals**: Continuous performance monitoring
+
+### **Analytics Integration**
+- **Google Analytics**: User behavior and conversion tracking
+- **Custom Events**: Portfolio-specific interaction tracking
+- **A/B Testing**: Content and design optimization
+- **Heatmaps**: User interaction visualization
+
+## 🔄 Maintenance & Updates
+
+### **Dependency Management**
+- **Regular Updates**: Monthly dependency updates
+- **Security Patches**: Immediate security updates
+- **Version Compatibility**: Ensure compatibility across updates
+- **Breaking Changes**: Plan for major version updates
+
+### **Content Updates**
+- **Content Management**: Easy content updates and modifications
+- **Version Control**: Track all content changes
+- **Backup Strategy**: Regular content backups
+- **Rollback Plan**: Quick rollback for content issues
+
+---
+
+*These technical specifications provide the foundation for implementation, ensuring consistency, performance, and maintainability across the entire portfolio project.*
